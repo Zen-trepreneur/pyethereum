@@ -230,7 +230,7 @@ def send(to, value):
     from = msg.sender
     fromvalue = self.balances[from]
     if fromvalue >= value:
-        self.balances[from] = fromvalue - value
+        
         self.balances[to] = self.balances[to] + value
         log(from, to, value)
         return(1)
